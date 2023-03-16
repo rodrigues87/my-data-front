@@ -4,13 +4,12 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header card-header-info">
-                        <h4 class="card-title">Informações Pessoais</h4>
+                        <h4 class="card-title teste" >Dados de Cadastro</h4>
                     </div>
                     <div class="card-body">
                         <form>
                             <div class="row">
-                                <div class="col-md-2">
-                                    <mat-form-field class="example-full-width">
+                                <div class="col-md-2"><mat-form-field class="example-full-width">
                                         <input matInput placeholder="Nome">
                                     </mat-form-field>
                                 </div>
@@ -20,7 +19,7 @@
                                     </mat-form-field>
                                 </div>
 
-                                <div class="col-md-2">
+                                <div class="col-md-2" style="white-space: inherit">
                                     <mat-form-field class="example-full-width">
                                         <input matInput placeholder="Data de Nascimento" type="date">
                                     </mat-form-field>
@@ -54,34 +53,51 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-md-3">
+                                <div class="col-md-2">
                                     <mat-form-field class="example-full-width">
                                         <input matInput placeholder="CEP" (input)="checkCep($event.target.value)" type="text">
                                     </mat-form-field>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-1">
                                     <mat-form-field class="example-full-width">
                                         <input matInput placeholder="Pais" [value]="pais" type="text">
                                     </mat-form-field>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-1">
                                     <mat-form-field class="example-full-width">
                                         <input matInput placeholder="Estado" [value]="estado" type="text">
                                     </mat-form-field>
                                 </div>
-                                <div class="col-md-3">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Cidade" [value]="cidade" type="text">
-                                    </mat-form-field>
+                                <div class="col-md-2">
+                                    <form class="">
+                                        <mat-form-field>
+                                            <mat-label>Cidade</mat-label>
+                                            <input type="text"
+                                                   aria-label="Cidade"
+                                                   matInput
+                                                   [formControl]="myControl"
+                                                   [value]="cidade"
+                                                   [matAutocomplete]="auto">
+                                            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                                                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                                                    {{option}}
+                                                </mat-option>
+                                            </mat-autocomplete>
+                                        </mat-form-field>
+                                    </form>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-5">
                                     <mat-form-field class="example-full-width">
                                         <input matInput placeholder="Endereço" [value]="endereco" type="text">
                                     </mat-form-field>
                                 </div>
+                                <div class="col-md-1">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="N°" [value]="numero" type="number">
+                                    </mat-form-field>
+                                </div>
                             </div>
+
                             <div class="row">
                                 <div class="col-md-12">
                                     <label>Sobre mim</label>
