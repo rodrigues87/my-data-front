@@ -7,9 +7,9 @@ import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { RegistryStarterComponent } from './registry-starter/registry-starter.component';
 import {NgxTypedJsModule} from "ngx-typed-js";
 import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   imports: [
@@ -22,11 +22,11 @@ import {MatInputModule} from "@angular/material/input";
     AppRoutingModule,
     NgxTypedJsModule,
     MatInputModule,
+    MatButtonModule,
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    RegistryStarterComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

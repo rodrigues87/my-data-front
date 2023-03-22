@@ -4,6 +4,7 @@ import {FormControl} from "@angular/forms";
 import {Observable} from "rxjs";
 import {map, startWith} from 'rxjs/operators';
 import {estados} from "../constants/estados";
+import { Router } from '@angular/router';
 @Component({
     selector: 'app-user-profile',
     templateUrl: './user-profile.component.html',
@@ -11,7 +12,7 @@ import {estados} from "../constants/estados";
 })
 export class UserProfileComponent implements OnInit {
 
-    constructor(private cepService: CepService) {
+    constructor(private cepService: CepService, private _router: Router) {
     }
 
     estado: string = '';
@@ -23,7 +24,15 @@ export class UserProfileComponent implements OnInit {
     myControl = new FormControl('');
     options: string[] = estados.map(value => value.nome);
     filteredOptions: Observable<string[]>;
+
+    isFirstTime = false;
     ngOnInit() {
+
+        if(this.isFirstTime){
+            this._router.navigate(['/account'])
+            this.isFirstTime = false;
+        }
+
         this.filteredOptions = this.myControl.valueChanges.pipe(
             startWith(''),
             map(value => this._filter(value || '')),

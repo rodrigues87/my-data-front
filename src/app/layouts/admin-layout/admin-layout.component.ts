@@ -154,4 +154,17 @@ export class AdminLayoutComponent implements OnInit {
       return bool;
   }
 
+    isNotTutorial(path){
+        var titlee = this.location.prepareExternalUrl(this.location.path());
+        titlee = titlee.slice( 1 );
+        console.log(titlee)
+        console.log(path)
+
+        if(path == titlee){
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
 }

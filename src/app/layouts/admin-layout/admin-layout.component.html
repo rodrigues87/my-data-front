@@ -7,7 +7,9 @@
     </div>
     -->
     <div class="main-panel">
-        <app-navbar></app-navbar>
+        <div *ngIf="isNotTutorial('admin/user-tutorial')">
+            <app-navbar></app-navbar>
+        </div>
         <router-outlet></router-outlet>
         <!--
         <div *ngIf="isMaps('maps')">

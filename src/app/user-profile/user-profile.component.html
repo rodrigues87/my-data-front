@@ -63,6 +63,7 @@
                                         <input matInput placeholder="Pais" [value]="pais" type="text">
                                     </mat-form-field>
                                 </div>
+
                                 <div class="col-md-1">
                                     <mat-form-field class="example-full-width">
                                         <input matInput placeholder="Estado" [value]="estado" type="text">
@@ -114,7 +115,7 @@
                                     </div> -->
                                 </div>
                             </div>
-                            <button mat-raised-button type="submit" class="btn btn-info pull-right">Salvar</button>
+                            <button mat-raised-button type="submit" [routerLink]="['/account']" class="btn btn-info pull-right">Salvar</button>
 
                             <button mat-raised-button class="btn btn-danger pull-right">Sair</button>
 

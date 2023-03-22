@@ -1,17 +1,17 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 
 @Component({
-  selector: 'app-registry-starter',
-  templateUrl: './registry-starter.component.html',
-  styleUrls: ['./registry-starter.component.scss']
+  selector: 'app-user-tutorial',
+  templateUrl: './user-tutorial.component.html',
+  styleUrls: ['./user-tutorial.component.scss']
 })
-
-
-export class RegistryStarterComponent implements OnInit {
+export class UserTutorialComponent implements OnInit {
 
   @ViewChild('publicSearchBox') searchBoxField: ElementRef;
   start: boolean = false
   imputNomeCompleto: boolean = false;
+  imputButtonProsseguir: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -25,6 +25,8 @@ export class RegistryStarterComponent implements OnInit {
 
   showImput() {
     this.imputNomeCompleto = true;
+    this.imputButtonProsseguir = true;
     this.searchBoxField.nativeElement.focus();
   }
+
 }

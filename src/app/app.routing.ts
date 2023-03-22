@@ -4,20 +4,15 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import {RegistryStarterComponent} from "./registry-starter/registry-starter.component";
 
 const routes: Routes =[
   {
     path: '',
-    redirectTo: 'account',
+    redirectTo: 'admin/user-tutorial',
     pathMatch: 'full',
   },
   {
-    path: 'account',
-    component: RegistryStarterComponent
-  },
-  {
-    path: '',
+    path: 'admin',
     component: AdminLayoutComponent,
     children: [{
       path: '',
@@ -31,7 +26,6 @@ const routes: Routes =[
     CommonModule,
     BrowserModule,
     RouterModule.forRoot(routes,{
-       useHash: true
     })
   ],
   exports: [
