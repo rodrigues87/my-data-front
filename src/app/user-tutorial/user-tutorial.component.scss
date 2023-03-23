@@ -3,6 +3,11 @@
   color: white !important;
 }
 
+.ng-deep .mat-focused .placeholder {
+  /*change color of label*/
+  color: white !important;
+}
+
 .ng-deep .mat-form-field-label {
   /*change color of label*/
   color: white !important;
@@ -19,4 +24,11 @@
 }
 .mat-input-element {
   caret-color: white;
+}
+.mat-form-field-appearance-legacy .mat-form-field-label {
+  color: #AAAAAA;
+}
+
+.mat-form-field.mat-focused .mat-form-field-label {
+  color: #9e9e9e;
 }

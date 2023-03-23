@@ -7,10 +7,9 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 })
 export class UserTutorialComponent implements OnInit {
 
-  @ViewChild('publicSearchBox') searchBoxField: ElementRef;
+  @ViewChild('inputFirstName') searchBoxField: ElementRef;
   start: boolean = false
-  imputNomeCompleto: boolean = false;
-  imputButtonProsseguir: boolean = false;
+  formFirstName: boolean = false;
 
   constructor() { }
 
@@ -18,15 +17,12 @@ export class UserTutorialComponent implements OnInit {
     setTimeout(() => this.start = true, 1000)
   }
 
-  onTypingAnimationComplete () {
-    console.log('#TYPING ANIMATION COMPLETE')
-    // ...
-  }
-
-  showImput() {
-    this.imputNomeCompleto = true;
-    this.imputButtonProsseguir = true;
+  showImputFirstName() {
+    this.formFirstName = true;
     this.searchBoxField.nativeElement.focus();
   }
 
+  nextComponent() {
+
+  }
 }
