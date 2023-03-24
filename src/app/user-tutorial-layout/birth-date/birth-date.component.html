@@ -1,0 +1,53 @@
+<ngx-typed-js
+        [strings]="['Precisamos confirmar sua idade']"
+        [loop]="false"
+        [showCursor]="false"
+        [fadeOut]="false"
+        (completed)="showImputFirstName()"
+        [typeSpeed]="40">
+    <h2 class="typing"></h2>
+</ngx-typed-js>
+
+
+<div class="row" style="margin-top: 30px">
+    <div class="col-md-3"></div>
+    <div class="col-md-6" *ngIf="formFirstName">
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <mat-form-field class="example-form-field" style="color: white !important;">
+                    <input type="text" maxlength="2" [value]="day" (keyup)="setDay($event.target.value)" placeholder="Dia" matInput  autofocus>
+                </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-form-field" style="color: white !important;">
+                    <input type="text" maxlength="2" [value]="month" (keyup)="setMonth($event.target.value)" placeholder="Mes" matInput>
+                </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-form-field" style="color: white !important;">
+                    <input type="text" maxlength="4" [value]="year" (keyup)="setYear($event.target.value)"  placeholder="Ano" matInput >
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <button mat-raised-button type="submit" [routerLink]="['/user-tutorial/full-name']"
+                        class="btn btn-white btn-block" style="color: #0d47a1; font-weight: bold">Voltar
+                </button>
+            </div>
+            <div class="col-md">
+                <button mat-raised-button type="submit" (click)="saveFullDate()"
+                        class="btn btn-white btn-block" style="color: #0d47a1; font-weight: bold">CONTINUAR
+                </button>
+
+            </div>
+        </div>
+
+
+    </div>
+    <div class="col-md-3"></div>
+
+</div>

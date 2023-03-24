@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RegistryNavComponent } from './registry-nav.component';
+import { BirthDateComponent } from './birth-date.component';
 
-describe('RegistryNavComponent', () => {
-  let component: RegistryNavComponent;
-  let fixture: ComponentFixture<RegistryNavComponent>;
+describe('BirthDateComponent', () => {
+  let component: BirthDateComponent;
+  let fixture: ComponentFixture<BirthDateComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RegistryNavComponent ]
+      declarations: [ BirthDateComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(RegistryNavComponent);
+    fixture = TestBed.createComponent(BirthDateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

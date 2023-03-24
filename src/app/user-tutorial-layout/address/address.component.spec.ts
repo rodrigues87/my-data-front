@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UserTutorialComponent } from './user-tutorial.component';
+import { AddressComponent } from './address.component';
 
-describe('UserTutorialComponent', () => {
-  let component: UserTutorialComponent;
-  let fixture: ComponentFixture<UserTutorialComponent>;
+describe('AddressComponent', () => {
+  let component: AddressComponent;
+  let fixture: ComponentFixture<AddressComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserTutorialComponent ]
+      declarations: [ AddressComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(UserTutorialComponent);
+    fixture = TestBed.createComponent(AddressComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

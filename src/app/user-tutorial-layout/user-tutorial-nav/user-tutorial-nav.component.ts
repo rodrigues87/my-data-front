@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-registry-nav',
-  templateUrl: './registry-nav.component.html',
-  styleUrls: ['./registry-nav.component.scss']
+  selector: 'app-user-tutorial-nav',
+  templateUrl: './user-tutorial-nav.component.html',
+  styleUrls: ['./user-tutorial-nav.component.scss']
 })
-export class RegistryNavComponent implements OnInit {
+export class UserTutorialNavComponent implements OnInit {
 
   constructor(private router: Router) { }
 
