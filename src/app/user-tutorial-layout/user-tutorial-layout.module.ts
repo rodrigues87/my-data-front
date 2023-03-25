@@ -15,6 +15,7 @@ import {FullNameComponent} from "./full-name/full-name.component";
 import {UserTutorialNavComponent} from "./user-tutorial-nav/user-tutorial-nav.component";
 import { BirthDateComponent } from './birth-date/birth-date.component';
 import { AddressComponent } from './address/address.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
     imports: [
@@ -40,7 +41,8 @@ import { AddressComponent } from './address/address.component';
         FullNameComponent,
         UserTutorialNavComponent,
         BirthDateComponent,
-        AddressComponent
+        AddressComponent,
+        ContactComponent
     ]
 })
 

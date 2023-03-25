@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
+import {StorageService} from "../../services/storage.service";
 
 @Component({
   selector: 'app-user-tutorial',
@@ -14,19 +15,15 @@ export class FullNameComponent implements OnInit {
   firstName: string ='';
   lastName: string = '';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private storageService: StorageService) { }
 
   ngOnInit(): void {
     setTimeout(() => this.start = true, 1000)
 
-    this.firstName = localStorage.getItem('firstName');
-    if(this.firstName === "null"){
-      this.firstName = ''
-    }
-    this.lastName = localStorage.getItem('lastName');
-    if(this.lastName === "null"){
-      this.lastName = ''
-    }
+    this.firstName = this.storageService.getItem('firstName');
+
+    this.lastName = this.storageService.getItem('lastName');
+
   }
 
   showImputFirstName() {
@@ -35,8 +32,8 @@ export class FullNameComponent implements OnInit {
 
   saveFullName() {
 
-    localStorage.setItem('firstName', this.firstName);
-    localStorage.setItem('lastName', this.lastName);
+    this.storageService.setItem('firstName', this.firstName);
+    this.storageService.setItem('lastName', this.lastName);
 
     this.router.navigate(["/user-tutorial/birth-date"])
 

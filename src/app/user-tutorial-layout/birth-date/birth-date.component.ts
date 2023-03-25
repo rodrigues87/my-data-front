@@ -1,4 +1,6 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Router} from "@angular/router";
+import {StorageService} from "../../services/storage.service";
 
 @Component({
   selector: 'app-birth-date',
@@ -6,27 +8,31 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
   styleUrls: ['./birth-date.component.scss']
 })
 export class BirthDateComponent implements OnInit {
-  @ViewChild('inputFirstName') searchBoxField: ElementRef;
   start: boolean = false
-  formFirstName: boolean = false;
+  formBirthDate: boolean = false;
 
-  day: string;
-  month: string;
-  year: string;
+  day: string = '';
+  month: string = '';
+  year: string = '';
 
-  constructor() { }
+  constructor(private router: Router, private storageService: StorageService) { }
 
   ngOnInit(): void {
     setTimeout(() => this.start = true, 1000)
-    this.day = localStorage.getItem("day")
-    this.month = localStorage.getItem("month")
-    this.year = localStorage.getItem("year")
+    if(this.day !== "null"){
+      this.day = this.storageService.getItem("day")
+    }
+    if(this.month !== "null"){
+      this.month = this.storageService.getItem("month")
+    }
+    if(this.year !== "null"){
+      this.year = this.storageService.getItem("year")
+    }
 
   }
 
   showImputFirstName() {
-    this.formFirstName = true;
-    this.searchBoxField.nativeElement.focus();
+    this.formBirthDate = true;
   }
 
   setDay(value: any) {
@@ -42,8 +48,15 @@ export class BirthDateComponent implements OnInit {
   }
 
   saveFullDate() {
-    localStorage.setItem("day", this.day)
-    localStorage.setItem("month", this.month)
-    localStorage.setItem("year", this.year)
+    if(this.day !== '' || this.month !== '' || this.year !== ''){
+
+
+      this.storageService.setItem("day", this.day)
+      this.storageService.setItem("month", this.month)
+      this.storageService.setItem("year", this.year)
+    }
+
+    this.router.navigate(["/user-tutorial/address"])
+
   }
 }

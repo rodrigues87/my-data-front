@@ -1,9 +1,9 @@
 <ngx-typed-js
-        [strings]="['Precisamos confirmar sua idade']"
+        [strings]="['Vamos adicionar alguns dados de contato']"
         [loop]="false"
         [showCursor]="false"
         [fadeOut]="false"
-        (completed)="showImputFirstName()"
+        (completed)="showInputContact()"
         [typeSpeed]="40">
     <h2 class="typing"></h2>
 </ngx-typed-js>
@@ -11,40 +11,41 @@
 
 <div class="row" style="margin-top: 30px">
     <div class="col-md-3"></div>
-    <div class="col-md-6" *ngIf="formBirthDate">
+    <div class="col-md-6" *ngIf="formContact">
 
         <div class="row">
 
-            <div class="col-md-4">
+            <div class="col-md">
                 <mat-form-field class="example-form-field" style="color: white !important;">
-                    <input type="text" maxlength="2" [value]="day" (keyup)="setDay($event.target.value)" placeholder="Dia" matInput  autofocus>
+                    <input type="text" maxlength="14" [value]="phone" (keyup)="setPhone($event.target.value)" placeholder="Telefone" matInput  autofocus>
                 </mat-form-field>
             </div>
-            <div class="col-md-4">
+
+        </div>
+        <div class="row">
+
+            <div class="col-md">
                 <mat-form-field class="example-form-field" style="color: white !important;">
-                    <input type="text" maxlength="2" [value]="month" (keyup)="setMonth($event.target.value)" placeholder="Mes" matInput>
+                    <input type="email" [value]="email" (keyup)="setEmail($event.target.value)" placeholder="Email" matInput>
                 </mat-form-field>
             </div>
-            <div class="col-md-4">
-                <mat-form-field class="example-form-field" style="color: white !important;">
-                    <input type="text" maxlength="4" [value]="year" (keyup)="setYear($event.target.value)"  placeholder="Ano" matInput >
-                </mat-form-field>
-            </div>
+
         </div>
 
         <div class="row">
             <div class="col-md">
-                <button mat-raised-button type="submit" [routerLink]="['/user-tutorial/full-name']"
+                <button mat-raised-button type="submit" [routerLink]="['/user-tutorial/address']"
                         class="btn btn-white btn-block" style="color: #0d47a1; font-weight: bold">Voltar
                 </button>
             </div>
             <div class="col-md">
-                <button mat-raised-button type="submit" (click)="saveFullDate()"
+                <button mat-raised-button type="submit" (click)="saveContact()
+"
                         class="btn btn-white btn-block" style="color: #0d47a1; font-weight: bold">CONTINUAR
                 </button>
-
             </div>
         </div>
+
     </div>
     <div class="col-md-3"></div>
 

@@ -1,1 +1,73 @@
-<p>address works!</p>
+<ngx-typed-js
+        [strings]="['Vamos adicionar alguns dados de localização']"
+        [loop]="false"
+        [showCursor]="false"
+        [fadeOut]="false"
+        (completed)="showImputAddress()"
+        [typeSpeed]="40">
+    <h2 class="typing"></h2>
+</ngx-typed-js>
+
+
+<div class="row" style="margin-top: 30px">
+    <div class="col-md-3"></div>
+    <div class="col-md-6" *ngIf="formAddress">
+
+        <div class="row">
+
+            <div class="col-md">
+                <mat-form-field class="example-form-field" style="color: white !important;">
+                    <input type="text" maxlength="8" [value]="cep" (keyup)="setCep($event.target.value)" placeholder="CEP" matInput  autofocus>
+                </mat-form-field>
+            </div>
+            <div class="col-md">
+                <mat-form-field class="example-form-field" style="color: white !important;">
+                    <input type="text" maxlength="2" [value]="pais" (keyup)="setPais($event.target.value)" placeholder="Pais" matInput>
+                </mat-form-field>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <mat-form-field class="example-form-field" style="color: white !important;">
+                    <input type="text" maxlength="4" [value]="estado" (keyup)="setEstado($event.target.value)"  placeholder="Estado" matInput >
+                </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-form-field" style="color: white !important;">
+                    <input type="text" maxlength="2" [value]="cidade" (keyup)="setCidade($event.target.value)" placeholder="Cidade" matInput  autofocus>
+                </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-form-field" style="color: white !important;">
+                    <input type="text" maxlength="2" [value]="numero" (keyup)="setNumero($event.target.value)" placeholder="Numero" matInput>
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <mat-form-field class="example-form-field" style="color: white !important;">
+                    <input type="text" maxlength="4" [value]="endereco" (keyup)="setEndereco($event.target.value)"  placeholder="Endereco" matInput >
+                </mat-form-field>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <button mat-raised-button type="submit" [routerLink]="['/user-tutorial/birth-date']"
+                        class="btn btn-white btn-block" style="color: #0d47a1; font-weight: bold">Voltar
+                </button>
+            </div>
+            <div class="col-md">
+                <button mat-raised-button type="submit" (click)="saveFullAddress()"
+                        class="btn btn-white btn-block" style="color: #0d47a1; font-weight: bold">CONTINUAR
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+
+</div>
