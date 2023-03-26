@@ -27,4 +27,5 @@ export const estados: any[] = [
     {nome: 'SP'},
     {nome: 'SE'},
     {nome: 'TO'},
+
 ];
