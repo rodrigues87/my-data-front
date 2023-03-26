@@ -15,6 +15,7 @@ import {AdminLayoutModule} from "./layouts/admin-layout/admin-layout.module";
 import {UserTutorialLayoutModule} from "./user-tutorial-layout/user-tutorial-layout.module";
 import { UserFormsLayoutComponent } from './user-forms-layout/user-forms-layout.component';
 import {UserFormsLayoutModule} from "./user-forms-layout/user-forms-layout.module";
+import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from "@angular/material/form-field";
 
 @NgModule({
     imports: [
@@ -38,7 +39,10 @@ import {UserFormsLayoutModule} from "./user-forms-layout/user-forms-layout.modul
     UserTutorialLayoutComponent,
     UserFormsLayoutComponent,
   ],
-  providers: [],
+  providers: [
+      { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'outline' } }
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

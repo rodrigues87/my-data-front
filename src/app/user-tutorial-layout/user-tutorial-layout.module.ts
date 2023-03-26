@@ -16,6 +16,7 @@ import {UserTutorialNavComponent} from "./user-tutorial-nav/user-tutorial-nav.co
 import { BirthDateComponent } from './birth-date/birth-date.component';
 import { AddressComponent } from './address/address.component';
 import { ContactComponent } from './contact/contact.component';
+import {TextMaskModule} from "angular2-text-mask";
 
 @NgModule({
     imports: [
@@ -33,6 +34,7 @@ import { ContactComponent } from './contact/contact.component';
         NgxTypedJsModule,
         MatInputModule,
         MatButtonModule,
+        TextMaskModule,
     ],
     exports: [
         UserTutorialNavComponent

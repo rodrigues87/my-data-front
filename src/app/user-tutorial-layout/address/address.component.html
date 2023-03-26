@@ -17,12 +17,14 @@
 
             <div class="col-md">
                 <mat-form-field class="example-form-field" style="color: white !important;">
+                    <mat-label>CEP</mat-label>
                     <input type="text" maxlength="8" [value]="cep" (keyup)="setCep($event.target.value)" placeholder="CEP" matInput  autofocus>
                 </mat-form-field>
             </div>
             <div class="col-md">
                 <mat-form-field class="example-form-field" style="color: white !important;">
-                    <input type="text" maxlength="2" [value]="pais" (keyup)="setPais($event.target.value)" placeholder="Pais" matInput>
+                    <mat-label>País</mat-label>
+                    <input type="text" maxlength="2" [value]="pais" (keyup)="setPais($event.target.value)" placeholder="País" matInput>
                 </mat-form-field>
             </div>
 
@@ -31,17 +33,20 @@
         <div class="row">
             <div class="col-md-4">
                 <mat-form-field class="example-form-field" style="color: white !important;">
+                    <mat-label>Estado</mat-label>
                     <input type="text" maxlength="4" [value]="estado" (keyup)="setEstado($event.target.value)"  placeholder="Estado" matInput>
                 </mat-form-field>
             </div>
             <div class="col-md-4">
                 <mat-form-field class="example-form-field" style="color: white !important;">
+                    <mat-label>Cidade</mat-label>
                     <input type="text" maxlength="2" [value]="cidade" (keyup)="setCidade($event.target.value)" placeholder="Cidade" matInput >
                 </mat-form-field>
             </div>
             <div class="col-md-4">
                 <mat-form-field class="example-form-field" style="color: white !important;">
-                    <input type="text" [value]="numero" [textMask] = "{mask: numberMask}" (keyup)="setNumero($event.target.value)" placeholder="Numero" matInput>
+                    <mat-label>Número</mat-label>
+                    <input type="text" [value]="numero"  (keyup)="setNumero($event.target.value)" placeholder="Número" matInput>
                 </mat-form-field>
             </div>
         </div>
@@ -49,6 +54,7 @@
         <div class="row">
             <div class="col-md">
                 <mat-form-field class="example-form-field" style="color: white !important;">
+                    <mat-label>Rua/Avenida</mat-label>
                     <input type="text" [value]="endereco" (keyup)="setEndereco($event.target.value)"  placeholder="Rua/Avenida" matInput >
                 </mat-form-field>
 

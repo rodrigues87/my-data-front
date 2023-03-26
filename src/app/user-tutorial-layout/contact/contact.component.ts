@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {StorageService} from "../../services/storage.service";
 
@@ -7,10 +7,13 @@ import {StorageService} from "../../services/storage.service";
     templateUrl: './contact.component.html',
     styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements OnInit, AfterViewInit {
     phone: any = '';
     email: any = '';
     formContact: boolean =false;
+    numberMask = ['(',/\d/,/\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/,/\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
+    isFirstExecution: boolean = true;
+    message: ['Vamos adicionar alguns dados de contato'];
 
     constructor(private router: Router, private storageService: StorageService) {
     }
@@ -18,7 +21,6 @@ export class ContactComponent implements OnInit {
     ngOnInit(): void {
         this.phone = this.storageService.getItem('phone')
         this.email = this.storageService.getItem('email')
-
     }
 
     setPhone(value: any) {
@@ -29,7 +31,7 @@ export class ContactComponent implements OnInit {
         this.email = value;
     }
 
-    showInputContact() {
+    showInputContract() {
         this.formContact = true;
     }
 
@@ -38,5 +40,13 @@ export class ContactComponent implements OnInit {
         this.storageService.setItem('email',this.email)
 
         this.router.navigate(["/forms/profile"])
+
+        this.isFirstExecution = false;
+
+    }
+
+    ngAfterViewInit(): void {
+        this.showInputContract();
+
     }
 }

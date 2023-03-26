@@ -14,12 +14,16 @@
     <div class="col-md-6" *ngIf="formFirstName">
 
         <mat-form-field class="example-form-field" style="color: white !important;">
+            <mat-label>Nome</mat-label>
+
             <input oninput="this.value = this.value.toUpperCase()" [value]="firstName" (keyup)="setName($event.target.value)" class="text-center" placeholder="Primeiro nome"
                    matInput type="text" autofocus>
 
         </mat-form-field>
 
         <mat-form-field class="example-form-field" style="color: white">
+            <mat-label>Sobrenome</mat-label>
+
             <input oninput="this.value = this.value.toUpperCase()" [value]="lastName" (keyup)="setLastName($event.target.value)" class="text-center" placeholder="Sobrenome" matInput
                    type="text" autofocus>
 

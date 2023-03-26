@@ -14,6 +14,7 @@ import {NgxTypedJsModule} from "ngx-typed-js";
 import {UserProfileComponent} from "./user-profile/user-profile.component";
 import {UserFormsNavComponent} from "./user-forms-nav/user-forms-nav.component";
 import {MatIconModule} from "@angular/material/icon";
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
     imports: [
@@ -38,7 +39,8 @@ import {MatIconModule} from "@angular/material/icon";
     ],
     declarations: [
         UserProfileComponent,
-        UserFormsNavComponent
+        UserFormsNavComponent,
+        FormsComponent
     ]
 })
 

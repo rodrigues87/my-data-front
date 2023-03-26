@@ -17,16 +17,22 @@
 
             <div class="col-md-4">
                 <mat-form-field class="example-form-field" style="color: white !important;">
+                    <mat-label>Dia</mat-label>
+
                     <input type="text" maxlength="2" [value]="day" (keyup)="setDay($event.target.value)" placeholder="Dia" matInput  autofocus>
                 </mat-form-field>
             </div>
             <div class="col-md-4">
                 <mat-form-field class="example-form-field" style="color: white !important;">
+                    <mat-label>Mês</mat-label>
+
                     <input type="text" maxlength="2" [value]="month" (keyup)="setMonth($event.target.value)" placeholder="Mes" matInput>
                 </mat-form-field>
             </div>
             <div class="col-md-4">
                 <mat-form-field class="example-form-field" style="color: white !important;">
+                    <mat-label>Ano</mat-label>
+
                     <input type="text" maxlength="4" [value]="year" (keyup)="setYear($event.target.value)"  placeholder="Ano" matInput >
                 </mat-form-field>
             </div>

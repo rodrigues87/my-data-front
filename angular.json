@@ -25,7 +25,8 @@
               "src/assets/scss/material-dashboard.scss",
               "src/assets/css/demo.css",
               "src/app/user-tutorial-layout/user-tutorial-layout.component.scss",
-              "src/app/user-forms-layout/user-forms-layout.component.scss"
+              "src/app/user-forms-layout/user-forms-layout.component.scss",
+              "src/app/app.component.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",

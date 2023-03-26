@@ -1,12 +1,13 @@
 import { Routes } from '@angular/router';
 import {UserProfileComponent} from "./user-profile/user-profile.component";
+import {FormsComponent} from "./forms/forms.component";
 
 export const UserFormsLayoutRouting: Routes = [
 
+
     {
         path: '',
-        redirectTo: 'profile',
-        pathMatch: 'full',
+        component: FormsComponent
     },
     {
         path: 'profile',

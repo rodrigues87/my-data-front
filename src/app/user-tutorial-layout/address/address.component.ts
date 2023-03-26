@@ -24,6 +24,7 @@ export class AddressComponent implements OnInit {
 
     options: string[] = estados.map(value => value.nome);
 
+
     constructor(private router: Router, private cepService: CepService, private storageService: StorageService) {
     }
 

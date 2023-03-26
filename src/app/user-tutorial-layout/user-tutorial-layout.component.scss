@@ -26,9 +26,26 @@
   caret-color: white;
 }
 .mat-form-field-appearance-legacy .mat-form-field-label {
-  color: #AAAAAA;
+  color: #9e9e9e !important;
 }
 
 .mat-form-field.mat-focused .mat-form-field-label {
+  color: #9e9e9e !important;
+}
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #9e9e9e !important;
+}
+
+.mat-form-field-appearance-outline .mat-focused ::placeholder {
+  color: #9e9e9e !important;
+}
+.mat-input-element::placeholder{
   color: #9e9e9e;
 }
+.mat-input-element{
+  color: #9e9e9e;
+}
+mat-label {
+  color: #9e9e9e;
+}
+
