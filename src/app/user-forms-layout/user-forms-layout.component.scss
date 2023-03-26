@@ -1,0 +1,14 @@
+.mat-input-element[type=date]::after, .mat-input-element[type=datetime]::after, .mat-input-element[type=datetime-local]::after, .mat-input-element[type=month]::after, .mat-input-element[type=week]::after, .mat-input-element[type=time]::after {
+  content: " ";
+  white-space: inherit !important;
+  width: 1px;
+}
+
+.mat-form-field-prefix .mat-icon, .mat-form-field-suffix .mat-icon {
+  font-size: 150%;
+  line-height: 1.4;
+}
+.mat-form-field-appearance-legacy .mat-form-field-infix {
+  padding: 0.4375em 0;
+  margin-right: 5px;
+}

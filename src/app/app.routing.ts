@@ -3,25 +3,25 @@ import {CommonModule,} from '@angular/common';
 import {BrowserModule} from '@angular/platform-browser';
 import {Routes, RouterModule} from '@angular/router';
 
-import {AdminLayoutComponent} from './layouts/admin-layout/admin-layout.component';
 import {UserTutorialLayoutComponent} from "./user-tutorial-layout/user-tutorial-layout.component";
+import {UserFormsLayoutComponent} from "./user-forms-layout/user-forms-layout.component";
 
 const routes: Routes = [
     {
         path: '',
-        redirectTo: 'user-tutorial',
+        redirectTo: 'tutorial',
         pathMatch: 'full',
     },
     {
-        path: 'admin',
-        component: AdminLayoutComponent,
+        path: 'forms',
+        component: UserFormsLayoutComponent,
         children: [{
             path: '',
-            loadChildren: () => import('./layouts/admin-layout/admin-layout.module').then(m => m.AdminLayoutModule)
+            loadChildren: () => import('./user-forms-layout/user-forms-layout.module').then(m => m.UserFormsLayoutModule)
         }]
     },
     {
-        path: 'user-tutorial',
+        path: 'tutorial',
         component: UserTutorialLayoutComponent,
         children: [{
             path: '',

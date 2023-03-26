@@ -35,7 +35,7 @@ export class FullNameComponent implements OnInit {
     this.storageService.setItem('firstName', this.firstName);
     this.storageService.setItem('lastName', this.lastName);
 
-    this.router.navigate(["/user-tutorial/birth-date"])
+    this.router.navigate(["/tutorial/birth-date"])
 
   }
 

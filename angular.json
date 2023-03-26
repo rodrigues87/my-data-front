@@ -24,7 +24,8 @@
               "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
               "src/assets/scss/material-dashboard.scss",
               "src/assets/css/demo.css",
-              "src/app/user-tutorial-layout/full-name/full-name.component.scss"
+              "src/app/user-tutorial-layout/user-tutorial-layout.component.scss",
+              "src/app/user-forms-layout/user-forms-layout.component.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",

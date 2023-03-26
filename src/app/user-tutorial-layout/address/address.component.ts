@@ -20,6 +20,8 @@ export class AddressComponent implements OnInit {
 
     cep: string = '';
 
+    mapsUrl = '';
+
     options: string[] = estados.map(value => value.nome);
 
     constructor(private router: Router, private cepService: CepService, private storageService: StorageService) {
@@ -45,7 +47,11 @@ export class AddressComponent implements OnInit {
         this.storageService.setItem('numero', this.numero);
         this.storageService.setItem('cep', this.cep);
 
-        this.router.navigate(["/user-tutorial/contact"])
+        this.mapsUrl = 'https://www.google.com/maps/search/' + this.endereco + "," + this.numero
+
+        this.storageService.setItem('mapsUrl', this.mapsUrl);
+
+        this.router.navigate(["/tutorial/contact"])
 
     }
 

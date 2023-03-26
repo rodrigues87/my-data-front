@@ -130,8 +130,8 @@ material-dashboard-angular
 │   │   │       ├── admin-layout.component.scss
 │   │   │       ├── admin-layout.component.spec.ts
 │   │   │       ├── admin-layout.component.ts
-│   │   │       ├── user-tutorial-layout.module.ts
-│   │   │       └── user-tutorial-layout.routing.ts
+│   │   │       ├── user-forms-layout.module.ts
+│   │   │       └── user-forms-layout.routing.ts
 │   │   ├── maps
 │   │   │   ├── maps.component.css
 │   │   │   ├── maps.component.html

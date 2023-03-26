@@ -13,6 +13,8 @@ import {MatButtonModule} from "@angular/material/button";
 import { UserTutorialLayoutComponent } from './user-tutorial-layout/user-tutorial-layout.component';
 import {AdminLayoutModule} from "./layouts/admin-layout/admin-layout.module";
 import {UserTutorialLayoutModule} from "./user-tutorial-layout/user-tutorial-layout.module";
+import { UserFormsLayoutComponent } from './user-forms-layout/user-forms-layout.component';
+import {UserFormsLayoutModule} from "./user-forms-layout/user-forms-layout.module";
 
 @NgModule({
     imports: [
@@ -28,11 +30,13 @@ import {UserTutorialLayoutModule} from "./user-tutorial-layout/user-tutorial-lay
         MatButtonModule,
         AdminLayoutModule,
         UserTutorialLayoutModule,
+        UserFormsLayoutModule,
     ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
     UserTutorialLayoutComponent,
+    UserFormsLayoutComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

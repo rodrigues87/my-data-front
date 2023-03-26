@@ -1,5 +1,3 @@
-<div class="main-content">
-    <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
@@ -9,43 +7,45 @@
                     <div class="card-body">
                         <form>
                             <div class="row">
-                                <div class="col-md-2"><mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Nome" autofocus>
+                                <div class="col-md-4"><mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Nome" [value]="firstName" autofocus>
                                     </mat-form-field>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-8">
                                     <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Sobrenome">
-                                    </mat-form-field>
-                                </div>
-
-                                <div class="col-md-2" style="white-space: inherit">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Data de Nascimento" type="date">
-                                    </mat-form-field>
-                                </div>
-                                <div class="col-md-2">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="CPF" type="text">
-                                    </mat-form-field>
-                                </div>
-
-                                <div class="col-md-2">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="RG" type="text">
+                                        <input matInput placeholder="Sobrenome" [value]="lastName">
                                     </mat-form-field>
                                 </div>
 
                             </div>
+
+                            <div class="row">
+                                <div class="col-md-4" style="white-space: inherit">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Data de Nascimento" type="date" [value]="birthDate">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="CPF" type="text" [value]="cpf">
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="RG" type="text" [value]="rg">
+                                    </mat-form-field>
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-md-4">
                                     <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="E-mail" type="email">
+                                        <input matInput placeholder="E-mail" type="email" [value]="email">
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-2">
                                     <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Telefone" mask="0000-0000"type="text">
+                                        <input matInput placeholder="Telefone" type="text" [value]="phone">
                                     </mat-form-field>
                                 </div>
 
@@ -53,31 +53,25 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="CEP" (input)="checkCep($event.target.value)" type="text">
+                                        <input matInput placeholder="CEP" (input)="checkCep($event.target.value)" type="text" [value]="cep">
                                     </mat-form-field>
                                 </div>
-                                <div class="col-md-1">
+                                <div class="col-md-3">
                                     <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Pais" [value]="pais" type="text">
+                                        <input matInput placeholder="Pais" type="text" [value]="pais">
                                     </mat-form-field>
                                 </div>
-
-                                <div class="col-md-1">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Estado" [value]="estado" type="text">
-                                    </mat-form-field>
-                                </div>
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <form class="">
                                         <mat-form-field>
-                                            <mat-label>Cidade</mat-label>
+                                            <mat-label>Estado</mat-label>
                                             <input type="text"
-                                                   aria-label="Cidade"
+                                                   aria-label="Estado"
                                                    matInput
                                                    [formControl]="myControl"
-                                                   [value]="cidade"
+                                                   [value]="estado"
                                                    [matAutocomplete]="auto">
                                             <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
                                                 <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
@@ -87,15 +81,48 @@
                                         </mat-form-field>
                                     </form>
                                 </div>
-                                <div class="col-md-5">
+
+                                <div class="col-md-3">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Cidade" type="text" [value]="cidade">
+                                    </mat-form-field>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
                                     <mat-form-field class="example-full-width">
                                         <input matInput placeholder="Endereço" [value]="endereco" type="text">
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-1">
-                                    <mat-form-field class="example-full-width">
+                                    <mat-form-field>
                                         <input matInput placeholder="N°" [value]="numero" type="number">
                                     </mat-form-field>
+                                </div>
+                                <div class="col-md-5">
+
+                                    <mat-form-field  *ngIf="!isDisabled" >
+
+                                        <input matInput placeholder="Url Maps" [value]="mapsUrl" type="url">
+
+                                        <mat-icon (click)="changeInputStatus()" matSuffix>mode_edit</mat-icon>
+
+                                    </mat-form-field>
+
+                                    <mat-form-field *ngIf="isDisabled">
+
+                                        <span (click)="gotoMaps()">
+                                            <input matInput type="text" (click)="gotoMaps()" [value]="mapsUrl" placeholder="Url Maps" style="cursor: pointer; color: #0d47a1; margin-right: 3px" >
+
+                                        </span>
+
+
+                                        <mat-icon (click)="changeInputStatus()" matSuffix>mode_edit</mat-icon>
+
+                                    </mat-form-field>
+
                                 </div>
                             </div>
 
@@ -124,6 +151,4 @@
                     </div>
                 </div>
             </div>
-        </div>
     </div>
-</div>

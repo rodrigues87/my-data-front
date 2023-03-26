@@ -37,6 +37,6 @@ export class ContactComponent implements OnInit {
         this.storageService.setItem('phone',this.phone)
         this.storageService.setItem('email',this.email)
 
-        this.router.navigate(["/admin/user-profile"])
+        this.router.navigate(["/forms/profile"])
     }
 }
