@@ -14,7 +14,10 @@ import {NgxTypedJsModule} from "ngx-typed-js";
 import {UserProfileComponent} from "./user-profile/user-profile.component";
 import {UserFormsNavComponent} from "./user-forms-nav/user-forms-nav.component";
 import {MatIconModule} from "@angular/material/icon";
-import { FormsComponent } from './forms/forms.component';
+import {FormsComponent} from './forms/forms.component';
+import {MatCardModule} from "@angular/material/card";
+import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
     imports: [
@@ -33,14 +36,18 @@ import { FormsComponent } from './forms/forms.component';
         MatInputModule,
         MatButtonModule,
         MatIconModule,
+        MatCardModule,
+        MatDialogModule,
+
     ],
     exports: [
-        UserFormsNavComponent
+        UserFormsNavComponent,
     ],
     declarations: [
         UserProfileComponent,
         UserFormsNavComponent,
-        FormsComponent
+        FormsComponent,
+        DeleteDialogComponent,
     ]
 })
 

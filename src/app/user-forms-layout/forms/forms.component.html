@@ -1,2 +1,128 @@
+<div class="row">
 
-<p style="color: white">forms works!</p>
+    <div class="col-md-3 ">
+        <mat-card class="card-forms">
+            <mat-card-header class="text-center">
+                <mat-card-title>Principal</mat-card-title>
+            </mat-card-header>
+
+            <mat-card-content>
+                <img mat-card-image style="padding: 5px"
+                     src="https://www.canalautismo.com.br/wp-content/uploads/2018/05/qrcode-RevistaAutismo.png"
+                     alt="Photo of a Shiba Inu">
+                <p>
+                    Este é o seu formulário principal, aqui voce pode colocar todos os dados que precisa.
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <div class="row">
+                    <div class="col-4">
+                        <a class="nav-link" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons text-secondary"  >share</i>
+
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a class="nav-link" href="javascript:void(0)" data-toggle="dropdown" [routerLink]="['profile']" aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons  text-secondary" >edit</i>
+
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a class="nav-link" href="javascript:void(0)"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons  text-secondary"  (click)="openDialog('0ms', '0ms')">delete</i>
+
+                        </a>
+                    </div>
+                </div>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    <div class="col-md-3">
+        <mat-card class="text-center">
+            <mat-card-header>
+                <mat-card-title>Localização</mat-card-title>
+            </mat-card-header>
+
+            <mat-card-content>
+                <img mat-card-image style="padding: 5px"
+                     src="https://www.canalautismo.com.br/wp-content/uploads/2018/05/qrcode-RevistaAutismo.png"
+                     alt="Photo of a Shiba Inu">
+                <p>
+                    Aqui reunimos as suas informações de localização. Voce pode incluir outras se quiser
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <div class="row">
+                    <div class="col-4">
+                        <a class="nav-link" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons text-secondary"  >share</i>
+
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a class="nav-link" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons  text-secondary" >edit</i>
+
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a class="nav-link" href="javascript:void(0)"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons  text-secondary" >delete</i>
+
+                        </a>
+                    </div>
+                </div>            </mat-card-actions>
+        </mat-card>
+    </div>
+
+    <div class="col-md-3">
+        <mat-card class="example-card text-center">
+            <mat-card-header>
+                <mat-card-title>Pessoais</mat-card-title>
+            </mat-card-header>
+
+            <mat-card-content>
+                <img mat-card-image style="padding: 5px"
+                     src="https://www.canalautismo.com.br/wp-content/uploads/2018/05/qrcode-RevistaAutismo.png"
+                     alt="Photo of a Shiba Inu">
+                <p>
+                    Neste formulário separamos algumas informações pessoais. Voce pode incluir outras se quiser
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <div class="row">
+                    <div class="col-4">
+                        <a class="nav-link" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons text-secondary"  >share</i>
+
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a class="nav-link" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons  text-secondary" >edit</i>
+
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a class="nav-link" href="javascript:void(0)"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons  text-secondary" >delete</i>
+
+                        </a>
+                    </div>
+                </div>
+
+
+
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    <div class="col-md-3">
+        <a class="nav-link" href="javascript:void(0)"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="material-icons text-white" style="margin-top: 100%; font-size: 50px">add_circle</i>
+
+        </a>
+
+    </div>
+
+</div>

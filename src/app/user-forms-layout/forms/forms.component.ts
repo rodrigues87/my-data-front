@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog, MatDialogRef} from "@angular/material/dialog";
+import {DeleteDialogComponent} from "../delete-dialog/delete-dialog.component";
 
 @Component({
   selector: 'app-forms',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) {
+  }
 
   ngOnInit(): void {
+  }
+
+  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
+    this.dialog.open(DeleteDialogComponent, {
+      width: '250px',
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
   }
 
 }

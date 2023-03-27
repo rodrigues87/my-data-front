@@ -39,7 +39,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
         this.storageService.setItem('phone',this.phone)
         this.storageService.setItem('email',this.email)
 
-        this.router.navigate(["/forms/profile"])
+        this.router.navigate(["/forms"])
 
         this.isFirstExecution = false;
 

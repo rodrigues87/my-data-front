@@ -7,12 +7,17 @@
                     <div class="card-body">
                         <form>
                             <div class="row">
-                                <div class="col-md-4"><mat-form-field class="example-full-width">
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <mat-label>Nome</mat-label>
+
                                         <input matInput placeholder="Nome" [value]="firstName" autofocus>
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-8">
                                     <mat-form-field class="example-full-width">
+                                        <mat-label>Sobrenome</mat-label>
+
                                         <input matInput placeholder="Sobrenome" [value]="lastName">
                                     </mat-form-field>
                                 </div>
@@ -22,17 +27,23 @@
                             <div class="row">
                                 <div class="col-md-4" style="white-space: inherit">
                                     <mat-form-field class="example-full-width">
+                                        <mat-label>Data de Nascimento</mat-label>
+
                                         <input matInput placeholder="Data de Nascimento" type="date" [value]="birthDate">
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-4">
                                     <mat-form-field class="example-full-width">
+                                        <mat-label>CPF</mat-label>
+
                                         <input matInput placeholder="CPF" type="text" [value]="cpf">
                                     </mat-form-field>
                                 </div>
 
                                 <div class="col-md-4">
                                     <mat-form-field class="example-full-width">
+                                        <mat-label>RG</mat-label>
+
                                         <input matInput placeholder="RG" type="text" [value]="rg">
                                     </mat-form-field>
                                 </div>
@@ -40,11 +51,15 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <mat-form-field class="example-full-width">
+                                        <mat-label>E-mail</mat-label>
+
                                         <input matInput placeholder="E-mail" type="email" [value]="email">
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-2">
                                     <mat-form-field class="example-full-width">
+                                        <mat-label>Telefone</mat-label>
+
                                         <input matInput placeholder="Telefone" type="text" [value]="phone">
                                     </mat-form-field>
                                 </div>
@@ -55,11 +70,15 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <mat-form-field class="example-full-width">
+                                        <mat-label>CEP</mat-label>
+
                                         <input matInput placeholder="CEP" (input)="checkCep($event.target.value)" type="text" [value]="cep">
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-3">
                                     <mat-form-field class="example-full-width">
+                                        <mat-label>Pais</mat-label>
+
                                         <input matInput placeholder="Pais" type="text" [value]="pais">
                                     </mat-form-field>
                                 </div>
@@ -84,6 +103,8 @@
 
                                 <div class="col-md-3">
                                     <mat-form-field class="example-full-width">
+                                        <mat-label>Cidade</mat-label>
+
                                         <input matInput placeholder="Cidade" type="text" [value]="cidade">
                                     </mat-form-field>
                                 </div>
@@ -93,17 +114,23 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <mat-form-field class="example-full-width">
+                                        <mat-label>Endereço</mat-label>
+
                                         <input matInput placeholder="Endereço" [value]="endereco" type="text">
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-1">
                                     <mat-form-field>
+                                        <mat-label>N°</mat-label>
+
                                         <input matInput placeholder="N°" [value]="numero" type="number">
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-5">
 
                                     <mat-form-field  *ngIf="!isDisabled" >
+                                        <mat-label>Url Maps</mat-label>
+
 
                                         <input matInput placeholder="Url Maps" [value]="mapsUrl" type="url">
 
@@ -112,6 +139,8 @@
                                     </mat-form-field>
 
                                     <mat-form-field *ngIf="isDisabled">
+                                        <mat-label>Url Maps</mat-label>
+
 
                                         <span (click)="gotoMaps()">
                                             <input matInput type="text" (click)="gotoMaps()" [value]="mapsUrl" placeholder="Url Maps" style="cursor: pointer; color: #0d47a1; margin-right: 3px" >
@@ -128,23 +157,18 @@
 
                             <div class="row">
                                 <div class="col-md-12">
-                                    <label>Sobre mim</label>
                                     <mat-form-field class="example-full-width">
+                                        <mat-label>Sobre mim</mat-label>
+
                                         <textarea matInput
                                                   placeholder=""></textarea>
                                     </mat-form-field>
-                                    <!-- <div class="form-group">
 
-                                        <div class="form-group">
-                                            <label class="bmd-label-floating"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
-                                            <textarea class="form-control" rows="5"></textarea>
-                                        </div>
-                                    </div> -->
                                 </div>
                             </div>
                             <button mat-raised-button type="submit" [routerLink]="['/forms']" class="btn btn-info pull-right">Salvar</button>
 
-                            <button mat-raised-button class="btn btn-danger pull-right">Sair</button>
+                            <button mat-raised-button class="btn btn-danger pull-right" routerLink="/forms">Sair</button>
 
                             <div class="clearfix"></div>
                         </form>
